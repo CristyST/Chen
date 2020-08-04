@@ -1,0 +1,52 @@
+序列
+序列：一种数据结构，它包含的元素都进行了编号（从0开始）
+典型序列：列表、字符串、元组
+列表可修改，元组不可修改（一旦创建便固定）
+列表方法：
+x=[2,8,4,6,7]
+x.append(4)-末尾添加新对象
+x.count(4)-统计某个元素在列表出现的次数
+a=[1,2,3]
+x.extend(a)-末尾扩展新列表
+
+x+a，并不会修改原列表，而是重新创建一个包含了x和a的新列表，用x=x+a 的连接操作效率会比extend方法低
+x.index(2)-返回2第一个匹配项的索引位置
+x.insert(3,2)-在索引3的位置处插入元素2
+x.pop(2)-移除列表中的索引为2的元素（默认是最后一个），并返回该元素的值
+x.remove(2)-移除列表中2的第一个匹配项
+x.reverse()-反向存放
+x.sort()-从小到大排序，修改原列表
+x.sort(key=len)-根据元素长度排序
+x.sort(reverse=True)-反向排序【从大到小】，x.sort(reverse=False)-正向排序【从小到大
+y=x.sort() ❌ → y=x y.sort()
+y=sorted(x)-原列表x不被修改，y排序
+cmp(x,y)-compare，x>y返回1，x<y返回-1，x=y返回0
+len(seq)-返回序列长度
+list(seq)-把序列转换成列表
+
+元组方法：
+(4)-int，(4,)-元组，()-空元组
+tuple(seq)-把序列转换成元组
+
+abs(-10)	#返回数字的绝对值
+#Out: 10
+math.sqrt(25)
+#Out: 5
+import cmath		#complex math复数
+cmath.sqrt(-25)		#平方根，可用负数
+#Out: 5j
+float(5)	#将字符串和数字转换为浮点数
+#Out: 5.0
+math.ceil(5.1)		#ceil天花板，向上取整，返回值的类型为浮点数
+math.floor(5.1)		#floor地板，向下取整，返回值的类型为浮点数
+round(5.1)			#四舍五入,round(number[,ndigits])给定精度
+pow.(2,3)		#2^3
+#Out: 8
+pow.(2,3,2)		#2^3%2
+#Out: 0
+input("What is your name?")		#获取用户输入
+#Out: 'Gumby'
+print(str("hello,world"))		#str与int、long一样，是数据类型
+#Out: hello,world
+print(repr("hello,world"))		#repr是函数，创建一个字符串，把引号中的内容全部打印出
+#Out: 'hello,world'
